@@ -14,7 +14,7 @@ function Page() {
         <div>
           <h1>__About me</h1>
           <p>
-            Hello! I'm Lanabi Mohamed, a versatile full stack developer
+            Hello! I am Lanabi Mohamed, a versatile full stack developer
             proficient in front-end and back-end technologies,delivering
             scalable web applications with expertise in JavaScript/TypeScript,
             Python, React and JavaFx.<br></br>

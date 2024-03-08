@@ -37,7 +37,7 @@ function Project({ isfirst, fun, projectname, content, link }: props) {
         style={{ background: "#0a0d12", borderColor: "#070a0f" }}
       >
         <div>
-          <p style={{ color: "#747c85" }}>/**</p>
+          <p style={{ color: "#747c85" }}>{"/**"}</p>
           <div className="ml-2 whitespace-pre-wrap relative margin-left">
             <p>{presentation}</p>
           </div>

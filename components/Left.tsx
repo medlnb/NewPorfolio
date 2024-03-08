@@ -19,7 +19,9 @@ function Left() {
     <div className="flex-1 flex flex-col justify-between gap-8">
       <div>
         <h2 className="text-lg font-medium">Hello! I am</h2>
-        <h1 className="lg:text-5xl text-4xl font-medium whitespace-nowrap">Lanabi Mohamed</h1>
+        <h1 className="lg:text-5xl text-4xl font-medium whitespace-nowrap">
+          Lanabi Mohamed
+        </h1>
         <h2 className="text-lg font-medium">full stack developer</h2>
       </div>
       <div>
@@ -31,7 +33,9 @@ function Left() {
         )}
       </div>
       <div>
-        <h3 className="text-gray-500">//write the code below to continue...</h3>
+        <h3 className="text-gray-500">
+          {"//write the code below to continue..."}
+        </h3>
         <div className="flex flex-row items-center gap-2 overflow-hidden">
           <h1 style={{ color: "#c9a6ee" }}>{">"}</h1>
           <input
