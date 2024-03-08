@@ -35,7 +35,13 @@ function Projects_Page() {
   }
   if (!projects)
     return (
-      <PropagateLoader color={"white"} loading={projects === null} size={30} />
+      <div className="mt-10 flex justify-center">
+        <PropagateLoader
+          color={"white"}
+          loading={projects === null}
+          size={30}
+        />
+      </div>
     );
   return (
     <div className="flex lg:flex-row lg:gap-0 gap-16 flex-col justify-between relative lg:py-32 py-10 pl-8 pr-1">
