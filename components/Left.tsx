@@ -42,7 +42,7 @@ function Left() {
             spellCheck={false}
             onChange={handleChange}
             value={CodeValue}
-            className="code"
+            className="code lg:text-xl text-sm"
             placeholder="whois"
           />
         </div>

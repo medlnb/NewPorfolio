@@ -118,7 +118,6 @@ a:-webkit-any-link {
 .code {
   background: none;
   border: none;
-  font-size: 1.5rem;
   color: #c9a6ee;
 }
 .code::placeholder {
