@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background: #0d1117;
+}
+.active {
+  background: #0d1117;
+  color: #c09f5e;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #6f4453;
+}
+.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #0d1117;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+/* ---------------------------------------------- */
+.slide-in-animation {
+  /* opacity: 0.5; */
+  animation: slideIn 0.7s forwards;
+}
+
+.slide-out-animation {
+  animation: slideout 0.7s forwards;
+}
+
+@keyframes slideout {
+  0% {
+    width: 100%;
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    width: 90%;
+    top: -50px;
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    width: 90%;
+    top: -50px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 100%;
+    top: 50px;
+    opacity: 1;
+  }
+}
+
+.light-shadow::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 120px #2f4356;
+  z-index: -1;
+}
+
+.margin-left::after,
+.margin-left-bold::after,
+.margin-left-bold-selected::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  width: 2px;
+  height: 85%;
+  background-color: #181c25;
+}
+.margin-left-bold::after {
+  height: 100%;
+  background: white;
+}
+.margin-left-bold-selected::after {
+  background: #854d0e;
+}
+/* ------------------------------------------------- */
+
+.code {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #c9a6ee;
+}
+.code::placeholder {
+  color: #5c5265;
+}
+.code:focus {
+  outline: none;
+  color: #c9a6ee;
+}
+/* ------------------------------------------------- */
