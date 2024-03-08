@@ -1,8 +1,8 @@
 import { connectToDatabase } from "@utils/database";
 import Project from "@models/project";
-import { NextApiRequest } from "next";
+import { NextRequest } from "next/server";
 
-export const POST = async (req: NextApiRequest) => {
+export const POST = async (req: NextRequest) => {
   try {
     await connectToDatabase();
     const {
@@ -14,7 +14,7 @@ export const POST = async (req: NextApiRequest) => {
       img,
       link,
       presentation,
-    } = await req.body();
+    } = await req.json();
     const project = await Project.create({
       page_shown,
       project_name,
@@ -33,7 +33,7 @@ export const POST = async (req: NextApiRequest) => {
     return new Response(JSON.stringify({ err: "Error bro" }), { status: 500 });
   }
 };
-export const GET = async (req: NextApiRequest) => {
+export const GET = async (req: NextRequest) => {
   try {
     await connectToDatabase();
 
