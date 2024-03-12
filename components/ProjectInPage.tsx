@@ -21,7 +21,6 @@ function ProjectInPage({
   demo,
   repository,
   img,
-  presentation,
   index,
 }: ProjectType) {
   return (
@@ -52,7 +51,7 @@ function ProjectInPage({
       <img
         src={img}
         className={` absolute w-36 object-cover transition top-0 z-0 opacity-80 ${
-          index === 0 ? "-left-10 -rotate-12" : "rotate-12 -right-10"
+          index % 2 === 0 ? "-left-10 -rotate-12" : "rotate-12 -right-10"
         }`}
       />
     </div>
