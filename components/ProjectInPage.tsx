@@ -50,7 +50,7 @@ function ProjectInPage({
       </div>
       <img
         src={img}
-        className={` absolute w-36 object-cover transition top-0 z-0 opacity-80 ${
+        className={` absolute w-36 object-cover transition top-0 z-0 opacity-50 ${
           index % 2 === 0 ? "-left-10 -rotate-12" : "rotate-12 -right-10"
         }`}
       />
