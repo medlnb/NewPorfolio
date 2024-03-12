@@ -31,10 +31,14 @@ export const POST = async (req: NextRequest) => {
     return new Response(JSON.stringify({ err: "Error bro" }), { status: 500 });
   }
 };
-export const GET = async (req: NextRequest) => {
+export const GET = async (
+  req: NextRequest,
+  { params }: { params: { page: string } }
+) => {
   try {
     await connectToDatabase();
-    const limit = 2;
+
+    const limit = Number(params.page);
     const projects = await Project.find().sort({ createdAt: -1 }).limit(limit);
     return new Response(JSON.stringify(projects), { status: 200 });
   } catch (error) {

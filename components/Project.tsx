@@ -2,12 +2,12 @@
 interface props {
   isfirst: boolean;
   fun: any;
-  projectname: string;
+  title: string;
   content: string[];
   link: string;
 }
 
-function Project({ isfirst, fun, projectname, content, link }: props) {
+function Project({ isfirst, fun, title, content, link }: props) {
   let presentation = `\n  */
   `;
   for (let index = content.length - 1; index >= 0; index--) {
@@ -29,7 +29,7 @@ function Project({ isfirst, fun, projectname, content, link }: props) {
         }}
         className="whitespace-nowrap flex justify-between items-center"
       >
-        <h1 style={{ color: "#ab873f" }}>{projectname}</h1>
+        <h1 style={{ color: "#ab873f" }}>{title}</h1>
         <h2 style={{ color: "#353e4a" }}>07/23</h2>
       </div>
       <div
@@ -47,7 +47,7 @@ function Project({ isfirst, fun, projectname, content, link }: props) {
           style={{ color: "#282319" }}
         >
           <a target="_blank" href={link}>
-            {projectname == "My Portfolio" ? "resume.get()" : "see the project"}
+            {title == "My Portfolio" ? "resume.get()" : "see the project"}
           </a>
         </button>
       </div>

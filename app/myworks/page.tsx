@@ -90,7 +90,7 @@ function page() {
   return (
     <div className="mt-6 lg:p-8 lg:px-32 px-4 p-2 text-xs lg:text-base">
       <h1 className="text-center text-3xl font-medium  mb-10">
-        Four Years of Skill Mastery
+        4 Years of Skill Mastery
       </h1>
       <div className="grid lg:grid-cols-2  gap-4">
         {skills.map((skill) => (
@@ -112,7 +112,7 @@ function page() {
         ))}
       </div>
       <h1 className="text-center text-3xl font-medium  my-10">
-        Using The Skill on Top You Can Make These
+        Using The Skills on Top You Can Make These
       </h1>
       <Projects />
     </div>

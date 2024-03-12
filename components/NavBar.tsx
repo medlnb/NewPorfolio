@@ -28,7 +28,7 @@ function NavBar() {
         <Link
           href="/myworks"
           className={`md:text-white border-l border-r border-black py-3 md:px-20 px-2 relative ${
-            pathname === "/skills" ? "active" : ""
+            pathname === "/myworks" ? "active" : ""
           }`}
         >
           _skills & _projects

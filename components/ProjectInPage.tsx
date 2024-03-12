@@ -7,8 +7,8 @@ interface ProjectType {
   title: string;
   utils_data: string[];
   description: string;
-  demo: string;
-  repository: string;
+  demo?: string;
+  repository?: string;
   img: string;
   presentation: string[];
   index: number;
@@ -25,7 +25,7 @@ function ProjectInPage({
   index,
 }: ProjectType) {
   return (
-    <div className="bg-white text-center text-black rounded-md p-4 relative overflow-hidden">
+    <div className="bg-white text-center text-black rounded-md p-4 relative overflow-hidden transition duration-200 hover:bg-black hover:text-white hover:outline hover:outline-1">
       <div className="text-content relative z-10">
         <h1>{title}</h1>
         <h2 className="flex justify-center gap-2">
@@ -37,12 +37,16 @@ function ProjectInPage({
         </h2>
         <p className="text-gray-600 text-xs my-4">{description}</p>
         <div className="flex justify-center items-center gap-6">
-          <Link href={repository} target="_blank">
-            <IoLogoGithub fill="black" />
-          </Link>
-          <Link href={demo} target="_blank">
-            <FaExternalLinkAlt fill="black" />
-          </Link>
+          {repository && (
+            <Link href={repository} target="_blank">
+              <IoLogoGithub />
+            </Link>
+          )}
+          {demo && (
+            <Link href={demo} target="_blank">
+              <FaExternalLinkAlt />
+            </Link>
+          )}
         </div>
       </div>
       <img
