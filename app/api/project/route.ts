@@ -6,23 +6,21 @@ export const POST = async (req: NextRequest) => {
   try {
     await connectToDatabase();
     const {
-      page_shown,
-      project_name,
-      description,
+      title,
       utils_data,
-      landscape,
+      description,
+      demo,
+      repository,
       img,
-      link,
       presentation,
     } = await req.json();
     const project = await Project.create({
-      page_shown,
-      project_name,
-      description,
+      title,
       utils_data,
-      landscape,
+      description,
+      demo,
+      repository,
       img,
-      link,
       presentation,
     });
     if (project)
@@ -36,8 +34,8 @@ export const POST = async (req: NextRequest) => {
 export const GET = async (req: NextRequest) => {
   try {
     await connectToDatabase();
-
-    const projects = await Project.find().sort({ createdAt: -1 });
+    const limit = 2;
+    const projects = await Project.find().sort({ createdAt: -1 }).limit(limit);
     return new Response(JSON.stringify(projects), { status: 200 });
   } catch (error) {
     console.log(error);

@@ -1,0 +1,103 @@
+[
+  {
+    "_id": "65bfe599c94c470065c20a14",
+    "page_shown": "Landing page",
+    "project_name": "Student's Space",
+    "description": "Student's space is a platform designed for teachers to easily manage their classrooms, as well as handle student attendance and participation.",
+    "utils_data": ["React", "TypeScript", "Mongodb"],
+    "landscape": true,
+    "img": "https://i.ibb.co/mh6fm74/Screenshot-from-2024-02-04-12-31-06.png",
+    "link": "https://s-s-s.vercel.app",
+    "presentation": [
+      "Better Than moodle",
+      "Very easy to use",
+      "Be always updated with Ur class"
+    ],
+    "createdAt": "2024-02-04T19:29:29.772Z",
+    "updatedAt": "2024-02-04T19:29:29.772Z",
+    "__v": 0
+  },
+  {
+    "_id": "6510c6fecb87f7f6ca3aec25",
+    "page_shown": "Landing page",
+    "project_name": "Heisenberg Matrix",
+    "description": "An online tasks/notes manager with also a Heisenberg matrix tasks system than allow you to set the priority of your tasks. ",
+    "utils_data": ["React", "HTML", "JavaScript", "Css", "Mongodb"],
+    "landscape": true,
+    "img": "https://i.ibb.co/y0zjL6G/Screenshot-from-2023-09-25-00-12-25.png",
+    "link": "https://heisenbergmatrix.vercel.app",
+    "presentation": [
+      "Make sure u take a deep look",
+      "Responsive for any device",
+      "React , js , Css, Mongodb"
+    ],
+    "createdAt": "2023-09-24T23:32:14.648Z",
+    "updatedAt": "2023-09-24T23:32:14.648Z",
+    "__v": 0
+  },
+  {
+    "_id": "64d0cd8e5253cee01240d421",
+    "page_shown": "Landing page",
+    "project_name": "My Portfolio",
+    "description": "My personal portfolio project is a sleek and responsive website that highlights my skills and achievements as a front end developer, providing a visually appealing showcase of my work.",
+    "utils_data": ["React", "HTML", "JavaScript", "Css"],
+    "landscape": true,
+    "img": "https://i.ibb.co/D7ZmQ96/Screenshot-from-2023-07-26-14-54-37.png",
+    "link": "https://drive.google.com/uc?export=download&id=1pkrvkNnrVMKz6aAcMpCKALI_1Hq9RzCk",
+    "presentation": [
+      "Make sure u take a deep look",
+      "Responsive for any device",
+      "React , js , Css, Mongodb",
+      "Animation"
+    ],
+    "createdAt": "2023-08-07T10:55:10.284Z",
+    "updatedAt": "2023-08-07T10:55:10.284Z",
+    "__v": 0
+  },
+  {
+    "_id": "64d0cd875253cee01240d41f",
+    "page_shown": "Landing page",
+    "project_name": "Todo list mobile",
+    "description": "Introducing our efficient online task management platform: Streamline your productivity with our user-friendly todo list website. Seamlessly organize, prioritize, and collaborate on tasks. Elevate your efficiency today!",
+    "utils_data": ["React", "HTML", "JavaScript", "Css", "Mongodb"],
+    "landscape": false,
+    "img": "https://i.ibb.co/4TkM8TM/Screenshot-from-2023-07-26-14-56-24.png",
+    "link": "https://todo-list-0.vercel.app/",
+    "presentation": [
+      "Access ur notes from anywhere",
+      "very easy to use",
+      "React , js , Css, Mongodb"
+    ],
+    "createdAt": "2023-08-07T10:55:03.391Z",
+    "updatedAt": "2023-08-07T10:55:03.391Z",
+    "__v": 0
+  },
+  {
+    "_id": "64d0cd165253cee01240d41d",
+    "page_shown": "Landing page",
+    "project_name": "Restaurent Menu",
+    "description": "My graduation project Was about digitization of restaurants, Restaurent Menu was the modern menu that works on Android devices.",
+    "utils_data": ["Android Studio", "JavaFX", "Xml"],
+    "landscape": true,
+    "img": "https://i.ibb.co/94qQskp/ds.png",
+    "presentation": [],
+    "createdAt": "2023-08-07T10:53:10.174Z",
+    "updatedAt": "2023-08-07T10:53:10.174Z",
+    "__v": 0
+  },
+  {
+    "_id": "64eb7b253d01f9b951e72773",
+    "page_shown": "Landing page",
+    "project_name": "Shoes Shop",
+    "description": "Your one-stop destination for shoe enthusiasts. Explore, choose, and own your perfect pair on our seamless online shoe store.",
+    "utils_data": ["React", "HTML", "TypeScript", "Css"],
+    "landscape": true,
+    "img": "https://i.ibb.co/7Nz3gkM/Screenshot-from-2023-08-27-17-26-48.png",
+    "link": "https://shoescom.vercel.app/",
+    "presentation": [
+      "modern online shoes store",
+      "not availbe for phones yet",
+      "React , ts , Css, Mongodb"
+    ]
+  }
+]

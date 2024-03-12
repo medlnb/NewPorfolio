@@ -10,6 +10,7 @@ import { BiLogoMongodb } from "react-icons/bi";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiNextdotjs } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
+import Projects from "@components/Projects";
 
 interface skill {
   title: string;
@@ -87,7 +88,7 @@ function page() {
     },
   ];
   return (
-    <div className="mt-6 lg:p-8 p-2 text-xs lg:text-base">
+    <div className="mt-6 lg:p-8 lg:px-32 px-4 p-2 text-xs lg:text-base">
       <h1 className="text-center text-3xl font-medium  mb-10">
         Four Years of Skill Mastery
       </h1>
@@ -110,6 +111,10 @@ function page() {
           </div>
         ))}
       </div>
+      <h1 className="text-center text-3xl font-medium  my-10">
+        Using The Skill on Top You Can Make These
+      </h1>
+      <Projects />
     </div>
   );
 }

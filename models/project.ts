@@ -2,11 +2,7 @@ import { Schema, model, models } from "mongoose";
 
 const ProjectSchema = new Schema(
   {
-    page_shown: {
-      type: String,
-      required: true,
-    },
-    project_name: {
+    title: {
       type: String,
       required: true,
       unique: true,
@@ -19,15 +15,14 @@ const ProjectSchema = new Schema(
       type: Array,
       required: true,
     },
-    landscape: {
-      type: Boolean,
-      required: true,
-    },
     img: {
       type: String,
       required: true,
     },
-    link: {
+    demo: {
+      type: String,
+    },
+    repository: {
       type: String,
     },
     presentation: {
