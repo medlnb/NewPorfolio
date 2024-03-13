@@ -14,77 +14,86 @@ import Projects from "@components/Projects";
 
 interface skill {
   title: string;
-  persantage: number;
   icon: any;
 }
 
-function page() {
-  const skills: skill[] = [
+function Page() {
+  const skills: { type: string; data: skill[] }[] = [
     {
-      title: "React",
-      persantage: 70,
-      icon: <FaReact />,
-    },
-    {
-      title: "Next",
-      persantage: 80,
-      icon: <SiNextdotjs />,
-    },
-    {
-      title: "JavaScript",
-      persantage: 70,
-      icon: <IoLogoJavascript />,
-    },
-    {
-      title: "TypeScript",
-      persantage: 80,
-      icon: <BiLogoTypescript />,
-    },
-    {
-      title: "Css",
-      persantage: 90,
-      icon: <IoLogoCss3 />,
-    },
-    {
-      title: "TailWind",
-      persantage: 80,
-      icon: <SiTailwindcss />,
-    },
-    {
-      title: "Html",
-      persantage: 90,
-      icon: <FaHtml5 />,
-    },
-    {
-      title: "Xml",
-      persantage: 80,
-      icon: <TbFileTypeXml />,
-    },
-    {
-      title: "Java",
-      persantage: 70,
-      icon: <FaJava />,
-    },
-    {
-      title: "Python",
-      persantage: 70,
-      icon: <FaPython />,
-    },
-    {
-      title: "C",
-      persantage: 60,
-      icon: <h1>C</h1>,
-    },
-    {
-      title: "MySql",
-      persantage: 80,
-      icon: <SiMysql />,
-    },
+      type: "Web",
+      data: [
+        {
+          title: "React",
+          icon: <FaReact />,
+        },
+        {
+          title: "Next",
 
+          icon: <SiNextdotjs />,
+        },
+        {
+          title: "JavaScript",
+          icon: <IoLogoJavascript />,
+        },
+        {
+          title: "TypeScript",
+
+          icon: <BiLogoTypescript />,
+        },
+        {
+          title: "Css",
+          icon: <IoLogoCss3 />,
+        },
+        {
+          title: "TailWind",
+
+          icon: <SiTailwindcss />,
+        },
+        {
+          title: "Html",
+          icon: <FaHtml5 />,
+        },
+      ],
+    },
     {
-      title: "Mongodb",
-      persantage: 80,
-      icon: <BiLogoMongodb />,
+      type: "Android",
+      data: [
+        {
+          title: "Xml",
+          icon: <TbFileTypeXml />,
+        },
+        {
+          title: "Java",
+          icon: <FaJava />,
+        },
+      ],
+    },
+    {
+      type: "Data Base",
+      data: [
+        {
+          title: "MySql",
+          icon: <SiMysql />,
+        },
+
+        {
+          title: "Mongodb",
+          icon: <BiLogoMongodb />,
+        },
+      ],
+    },
+    {
+      type: "others",
+      data: [
+        {
+          title: "Python",
+          icon: <FaPython />,
+        },
+        {
+          title: "C",
+          icon: <h1>C</h1>,
+        },
+      ],
     },
   ];
   return (
@@ -92,23 +101,13 @@ function page() {
       <h1 className="text-center text-3xl font-medium  mb-10">
         4 Years of Skill Mastery
       </h1>
-      <div className="grid lg:grid-cols-2  gap-4">
+      <div className="grid md:grid-cols-2 gap-3">
         {skills.map((skill) => (
-          <div key={skill.title} className="flex  gap-2">
-            <div className="w-40 gap-4 flex items-center">
-              <div className="text-3xl">{skill.icon}</div>
-              <p>{skill.title}</p>
-            </div>
-            <div className="h-1 w-full">
-              <p className="text-xs" style={{ color: "#4d596a" }}>
-                {skill.persantage}%
-              </p>
-              <div
-                style={{ width: `${skill.persantage}%` }}
-                className="h-full rounded-xl bg-blue-800"
-              ></div>
-            </div>
-          </div>
+          <SkillContainer
+            key={skill.type}
+            title={skill.type}
+            skillData={skill.data}
+          />
         ))}
       </div>
       <h1 className="text-center text-3xl font-medium  my-10">
@@ -119,4 +118,31 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
+
+const SkillContainer = ({
+  skillData,
+  title,
+}: {
+  skillData: skill[];
+  title: string;
+}) => {
+  return (
+    <div className="border border-gray-600 rounded-md flex flex-wrap justify-center items-center p-4 gap-4 relative">
+      {skillData.map((skill) => (
+        <div key={skill.title} className="flex  gap-2">
+          <div className="gap-2 flex flex-col items-center">
+            <div className="text-3xl">{skill.icon}</div>
+            <p>{skill.title}</p>
+          </div>
+        </div>
+      ))}
+      <p
+        className="absolute top-1/2 left-1/2 transition -translate-x-1/2 -translate-y-1/2 lg:text-5xl text-3xl whitespace-nowrap -z-10"
+        style={{ color: "rgb(69, 78, 92)" }}
+      >
+        {title}
+      </p>
+    </div>
+  );
+};

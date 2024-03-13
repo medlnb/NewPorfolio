@@ -25,8 +25,8 @@ function ProjectInPage({
 }: ProjectType) {
   return (
     <div className="bg-white text-center text-black rounded-md p-4 relative overflow-hidden transition duration-200 hover:bg-black hover:text-white hover:outline hover:outline-1">
-      <div className="text-content relative z-10">
-        <h1>{title}</h1>
+      <div className="relative z-10">
+        <h1 className="text-lg">{title}</h1>
         <h2 className="flex justify-center gap-2">
           {utils_data.map((util) => (
             <p className="text-sm" key={util}>
